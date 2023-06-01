@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções string</title>
+</head>
+<body>
+
+    <script>
+        var nome = " Jorge Sant Ana "
+        //propriedade length
+        document.write("Jorge Sant Ana".length)
+        document.write('<br>')
+        //ele é uma função então precisa dos parenteses
+        //mostra o dado contido em determinada posição
+        document.write("Jorge Sant Ana".charAt(7))
+
+        //mostra a primeira posição do dado passado
+        document.write("Jorge Sant Ana".indexOf('A'))
+
+        //altera um determinado dado de dentro de uma string 
+        document.write(nome.replace('Sant Ana', 'Silva'))
+
+        //repupera os dados entre duas posições 
+        document.write(nome.substr(6, 4))
+
+        //deixa a string em menuscula
+        document.write(nome.toLowerCase())
+
+        //deixa a string toda em maiuscula
+        document.write(nome.toUpperCase())
+
+        //tira os espações final e inicial da string
+        document.write('-' + nome.trim() + '-')
+    </script>
+    
+</body>
+</html>

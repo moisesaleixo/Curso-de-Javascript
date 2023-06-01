@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções datas</title>
+</head>
+<body>
+    <!-- www.e3school.com -->
+    <script>
+        //Instância um novo objeto de data
+        var data = new Date()
+
+        document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+
+        document.write('<br>')
+
+        //exibe o dia
+        document.write(data.getDate())
+
+        document.write('<br>')
+
+        //retorna o mes, porem os meses são em números começando em 0
+        document.write(data.getMonth() + 1)
+
+        document.write('<br>')
+
+        //retorna o ano
+        document.write(data.getFullYear())
+
+        document.write('<br>')
+        document.write('Cálculo com datas')
+        document.write('<br>')
+
+        //adicionar ou remover dias
+        document.write(data.toString())
+        data.setDate(data.getDate() + 1)
+        document.write('<hr>')
+        document.write(data.toString())
+        document.write('<hr>')
+        document.write('<br>')
+
+        //adiciona ou remove meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth() - 1)
+        document.write('<hr>')
+        document.write(data.toString())
+        document.write('<hr>')
+        document.write('<br>')
+
+        //adiciona ou remove anos
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() + 1)
+        document.write('<hr>')
+        document.write(data.toString())
+
+        document.write('<hr>')
+        document.write('<br>')
+
+        //calcular espaço entre datas
+        //15/01/2017
+        var data1 = new Date(2017, 0, 15)
+        //23/02/2017
+        var data2 = new Date(2017, 1, 23)
+
+        document.write(data1.toString())
+        document.write('<hr>')
+        document.write(data2.toString())
+
+        document.write('<br><br><hr>')
+
+        //converter para algo que possar ser calculado
+        document.write(data1.getTime())
+        document.write('<hr>')
+        document.write(data2.getTime())
+
+        document.write('<br><hr>')
+        //encontrar a quantidade de milissegundos entre as datas
+        var milissegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milissegundos_entre_datas)
+
+        //1 dia tem 24 horas 
+        //1 minuto tem 60 segundos 
+        //1 segundo tem 1000 milissegundos 
+        //então quantos milissegundos tem um dia? - (1*24*60*60*1000)
+        document.write('<br><hr>')
+        var milissegundos_por_dia = (1*24*60*60*1000)
+        document.write(milissegundos_por_dia)
+
+        document.write('<br><hr>')
+
+        document.write('A diferença entre data 1 e data 2 é: ' + Math.ceil( milissegundos_entre_datas / milissegundos_por_dia) + ' dias')
+
+    </script>
+</body>
+</html>

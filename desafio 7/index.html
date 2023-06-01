@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de fixação 7</title>
+</head>
+<body>
+
+    <input id="texto" type="text">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="ordenar()">Ordenar</button>
+
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionar() {
+            var escrito = document.getElementById('texto').value
+
+            if(escrito === ''){
+                alert('Informe um valor válido')
+            }else{
+                if (objetos.indexOf(escrito) === -1) {
+                    objetos.push(escrito)
+                    console.log(objetos)
+                }else{
+                    alert('Objeto já foi adicionado')
+                }
+            }
+            document.getElementById('texto').value = ''
+        }
+
+        function ordenar() {
+            console.log(objetos.sort())
+            document.getElementById('texto').value = ''
+        }
+
+    </script>
+    
+</body>
+</html>

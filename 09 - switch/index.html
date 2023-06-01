@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+
+    <table style="border: 1px solid black;">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>default</td>
+        </tr>
+    </table>
+    
+
+    <script>
+
+        var parametro = prompt('Digite sua opção:')
+        parametro = parseInt(parametro)
+
+        switch (parametro) {
+            case 1:
+                //se o parametro for === 1
+                document.write('Case 1')
+                break
+        
+            case 2:
+                //se o parametro for === 2
+                document.write('Case 2')
+                break
+
+            default:
+                //se o parametro não for encontrado
+                document.write('Default')
+                break
+        }
+    </script>
+</body>
+</html>

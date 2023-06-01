@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+</head>
+<body>
+    <script>
+
+        var nome = prompt('Seu nome:')
+        var altura = prompt('Sua altura:')
+        var peso = prompt('Seu peso:')
+
+        var imc = peso / (altura * altura)
+
+        var imc = parseFloat(imc.toFixed(2))
+
+        var resultado = ''
+
+        if(imc < 16){
+            resultado = 'Baixo peso muito grave'
+        }else if(imc >= 16 && imc <= 16.99){
+            resultado = 'Baixo peso grave'
+        }else if(imc >= 17 && imc <= 18.49){
+            resultado = 'Baixo peso'
+        }else if(imc >= 18.50 && imc <= 24.99){
+            resultado = 'Peso normal'
+        }else if(imc >= 25 && imc <= 29.99){
+            resultado = 'Sobrepeso'
+        }else if(imc >= 30 && imc <= 34.99){
+            resultado = 'Obesidade grau I'
+        }else if(imc >= 35 && imc <= 39.99){
+            resultado = 'Obesidade grau II'
+        }else{
+            resultado = 'Obesidade grau III'
+        }
+
+        document.write(nome + ' possui índice de massa coporal igual a ' + imc + ', sendo classificado como: ' + resultado)
+
+    </script>
+</body>
+</html>
